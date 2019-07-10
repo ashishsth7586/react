@@ -31,6 +31,16 @@ class App extends Component {
       properties: propertiesss
     })
   }
+  //Component is mounted only once
+  componentDidMount(){
+    console.log('Component Mounted')
+  }
+
+  componentDidUpdate(prevProps, prevState){
+    console.log('Components Update');
+    console.log(prevProps, prevState);
+  }
+
   render() {
     return (
       <div className="App">
