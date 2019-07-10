@@ -1,4 +1,5 @@
 import React from 'react';
+import './ninjas.css'
 /*
 // Class Based Component Needs State
 
@@ -25,8 +26,12 @@ class NestedComponent extends Component {
 export default NestedComponent;
 */
 // functional component , Doesn't need state rather values(Data) taken from props
-const NestedComponent = (props) => {
-    const { properties } = props;
+
+//Alternative to below code. destructuring the arguements of the function.
+//const NestedComponent = (props) => {
+    //const { properties, deleteProperty } = props;
+
+const NestedComponent = ({ properties, deleteProperty }) => {
     /*const propertyList = properties.map(property => {
         if (property.age > 23) {
             return (
@@ -48,6 +53,7 @@ const NestedComponent = (props) => {
                 <div>Name: { property.name }</div>
                 <div>Age: { property.age }</div>
                 <div>Color: { property.color }</div>
+                <button onClick={() => { deleteProperty(property.id) }}>Delete Property</button>
             </div>
         ) : null;
     })

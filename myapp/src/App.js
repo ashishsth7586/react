@@ -22,16 +22,25 @@ class App extends Component {
       properties: propertiess
     })
   }
+  deleteProperty = (id) => {
+    //foll
+    let propertiesss = this.state.properties.filter(property => {
+      return property.id !== id
+    });
+    this.setState({
+      properties: propertiesss
+    })
+  }
   render() {
     return (
       <div className="App">
         <h1>My First React App!</h1>
         <p>Welcome!!</p>
-        <NestedComponent properties={this.state.properties}/>
+        <NestedComponent properties={this.state.properties} deleteProperty={this.deleteProperty}/>
         <AddProperty addProperty = {this.addProperty} />
+        
       </div>
     )    
   }
 }
-
 export default App;
