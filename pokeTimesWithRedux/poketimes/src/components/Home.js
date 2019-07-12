@@ -4,6 +4,7 @@ import Pokeball from '../pokeball.png'
 import {connect} from 'react-redux'
 
 class Home extends Component {
+
     render() {
         console.log(this.props)
         const { posts} = this.props;
@@ -14,7 +15,7 @@ class Home extends Component {
                         <img src={Pokeball} alt = "A pokeball"></img>
                         <div className="card-content">
                             <Link to={'/' + post.id}><span className="card-title">{post.title}</span></Link>
-                            <p>{post.body}</p>
+                            <p>{post.body}</p>                            
                         </div>        
                     </div>
                 )
