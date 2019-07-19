@@ -17,7 +17,7 @@ class App extends React.Component{
             params: {
                 part: 'snippet',
                 maxResults: 8,
-                key: "AIzaSyDDq3fBCS8FIYpbg7_GQYZ4qXzOoifmI6k",
+                key: KEY,
                 q: term
             }
         }).then(response => {
