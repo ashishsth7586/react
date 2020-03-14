@@ -22,6 +22,14 @@ class App extends Component {
     countersCloned[index].value++;
     this.setState({ counters: countersCloned });
   };
+
+  handleDecrement = counter => {
+    const countersCloned = [...this.state.counters];
+    const index = countersCloned.indexOf(counter);
+    countersCloned[index] = { ...counter };
+    countersCloned[index].value--;
+    this.setState({ counters: countersCloned });
+  };
   handleDelete = counterId => {
     const counters = this.state.counters.filter(c => c.id !== counterId);
     this.setState({
@@ -38,6 +46,7 @@ class App extends Component {
       counters
     });
   };
+
   render() {
     return (
       <React.Fragment>
@@ -50,6 +59,7 @@ class App extends Component {
             onReset={this.handleReset}
             onIncrement={this.handleIncrement}
             onDelete={this.handleDelete}
+            onDecrement={this.handleDecrement}
           />
         </main>
       </React.Fragment>
