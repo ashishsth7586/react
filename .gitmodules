@@ -1,0 +1,3 @@
+[submodule "codewithmosh/vidly-api-node"]
+	path = codewithmosh/vidly-api-node
+	url = https://github.com/ashishsth7586/react/tree/master/codewithmosh
